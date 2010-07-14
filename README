@@ -23,7 +23,8 @@ DESCRIPTION
     So much todo...
 
 METHODS
-    Here is nothing... but see Net::APE::Cmd
+    Here is nothing... but see Net::APE::Cmd, Net::APE::Server,
+    Net::APE::Request
 
 AUTHOR
     Torsten Raudssus <torsten@raudssus.de>

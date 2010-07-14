@@ -29,5 +29,5 @@ BEGIN {
 
 	is(scalar $http_request->uri,
 	  'http://localhost:6969/?[%7B%22params%22:%7B%22password%22:%22testpasswd%22,%22data%22:%7B%7D,%22channel%22:%22*global%22,%22raw%22:%22mytest%22%7D,%22cmd%22:%22inlinepush%22%7D,%7B%22params%22:%7B%22password%22:%22testpasswd%22,%22data%22:%7B%7D,%22channel%22:%22*global%22,%22raw%22:%22mytest%22%7D,%22cmd%22:%22inlinepush%22%7D]');
-	
+	  
 }

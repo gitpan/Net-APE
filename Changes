@@ -1,0 +1,12 @@
+Revision history for Net::APE
+
+0.002    2010-07-15
+
+        - Some little fixes, more documentation
+		- Added new standard commands
+		- Added Net::APE::Session, Net::APE::Raw and Net::APE::Response
+		- Added live tests 
+
+0.001    2010-07-14
+
+        - Initial Release

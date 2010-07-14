@@ -56,11 +56,6 @@ sub get_http_request {
 
 =over 4
 
-		add_cmd => 'push',
-		count_cmds => 'count',
-		has_cmds => 'count',
-		no_cmds => 'is_empty',
-
 =item B<add_cmd($cmd)>
 
 Adding an L<Net::APE::Cmd> object to the request
@@ -77,7 +72,7 @@ Gives back true of there are no commands added.
 
 =item B<server>
 
-Get or set the L<Net::APE::Server> to send the commands
+Get the L<Net::APE::Server> for the request
 
 =head1 AUTHOR
 

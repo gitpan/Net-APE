@@ -1,6 +1,5 @@
 package Net::APE::Server;
 use Moose;
-use MooseX::LazyRequire;
 
 =head1 NAME
 
@@ -16,14 +15,14 @@ has host => (
 	is => 'ro',
 	isa => 'Str',
 	required => 1,
-	default => sub { 'localhost' },
+	default => sub { $ENV{NET_APE_SERVER_HOST} ? $ENV{NET_APE_SERVER_HOST} : 'localhost' },
 );
 
 has port => (
 	is => 'ro',
 	isa => 'Int',
 	required => 1,
-	default => sub { 6969 },
+	default => sub { $ENV{NET_APE_SERVER_PORT} ? $ENV{NET_APE_SERVER_PORT} : 6969 },
 );
 
 sub url {
@@ -40,10 +39,12 @@ sub url {
 =head2 host
 
 Setting the hostname of the APE-Server, can also be set via NET_APE_SERVER_HOST Environment variable.
+Elsewhere the default value is localhost.
 
 =head2 port
 
 Setting the hostname of the APE-Server, can also be set via NET_APE_SERVER_PORT Environment variable.
+Elsewhere the default value is 6969.
 
 =head2 url
 

@@ -2,7 +2,7 @@ package Net::APE;
 use strict;
 use warnings;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 1;
 
@@ -37,7 +37,7 @@ So much todo...
 
 =head1 METHODS
 
-Here is nothing... but see L<Net::APE::Cmd>
+Here is nothing... but see L<Net::APE::Cmd>, L<Net::APE::Server>, L<Net::APE::Request>
 
 =head1 AUTHOR
 

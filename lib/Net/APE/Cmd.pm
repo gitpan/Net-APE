@@ -17,6 +17,18 @@ has name => (
 	required => 1,
 );
 
+has sessid => (
+	is => 'rw',
+	isa => 'Str',
+	predicate => 'has_sessid',
+);
+
+has chl => (
+	is => 'rw',
+	isa => 'Int',
+	predicate => 'has_chl',
+);
+
 has params => (
 	traits    => ['Hash'],
 	is        => 'ro',
@@ -34,10 +46,13 @@ has params => (
 
 sub get_request_hash {
 	my ( $self ) = @_;
-	{
+	my $return = {
 		'cmd' => $self->name,
-		'params' => $self->params,
 	};
+	$return->{params} = $self->params if $self->num_params;
+	$return->{sessid} = $self->sessid if $self->has_sessid;
+	$return->{chl} = $self->chl if $self->has_chl;
+	return $return;
 }
 
 1;
