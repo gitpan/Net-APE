@@ -1,0 +1,20 @@
+inc/Module/Install.pm
+inc/Module/Install/Base.pm
+inc/Module/Install/Can.pm
+inc/Module/Install/Fetch.pm
+inc/Module/Install/Makefile.pm
+inc/Module/Install/Metadata.pm
+inc/Module/Install/Win32.pm
+inc/Module/Install/WriteAll.pm
+lib/Net/APE.pm
+lib/Net/APE/Cmd.pm
+lib/Net/APE/Cmd/Inlinepush.pm
+lib/Net/APE/Cmd/Role/Data.pm
+lib/Net/APE/Request.pm
+lib/Net/APE/Server.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+t/00-load.t
+t/01-simple.t
