@@ -1,17 +1,15 @@
 package Net::APE::Response;
+BEGIN {
+  $Net::APE::Response::AUTHORITY = 'cpan:GETTY';
+}
+BEGIN {
+  $Net::APE::Response::VERSION = '0.003';
+}
+# ABSTRACT: Parsing an APE-Server response
 use Moose;
 use JSON;
 use Net::APE::Raw;
 
-=head1 NAME
-
-Net::APE::Response - Parsing an APE-Server response
-
-=head1 SYNOPSIS
-	
-=head1 DESCRIPTION
-
-=cut
 
 has raws => (
 	traits => ['Array'],
@@ -47,22 +45,34 @@ sub BUILD {
 
 1;
 
+
+__END__
 =pod
+
+=head1 NAME
+
+Net::APE::Response - Parsing an APE-Server response
+
+=head1 VERSION
+
+version 0.003
+
+=head1 SYNOPSIS
+
+=head1 DESCRIPTION
 
 =head1 METHODS
 
-=over 4
-
 =head1 AUTHOR
 
-Torsten Raudssus <torsten@raudssus.de>
+Torsten Raudssus <torsten@raudssus.de> L<http://www.raudssus.de/>
 
-=head1 COPYRIGHT & LICENSE 
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2010 Torsten Raudssus, all rights reserved.
+This software is copyright (c) 2010 by Raudssus Social Software.
 
-This library is free software; you can redistribute it and/or modify it under the same terms as 
-Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may 
-have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+

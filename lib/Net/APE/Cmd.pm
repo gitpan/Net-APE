@@ -1,15 +1,13 @@
 package Net::APE::Cmd;
+BEGIN {
+  $Net::APE::Cmd::AUTHORITY = 'cpan:GETTY';
+}
+BEGIN {
+  $Net::APE::Cmd::VERSION = '0.003';
+}
+# ABSTRACT: Executing a command on the APE-Server
 use Moose;
 
-=head1 NAME
-
-Net::APE::Cmd - Executing a command on the APE-Server
-
-=head1 SYNOPSIS
-	
-=head1 DESCRIPTION
-
-=cut
 
 has name => (
 	is => 'ro',
@@ -57,36 +55,48 @@ sub get_request_hash {
 
 1;
 
+
+__END__
 =pod
+
+=head1 NAME
+
+Net::APE::Cmd - Executing a command on the APE-Server
+
+=head1 VERSION
+
+version 0.003
+
+=head1 SYNOPSIS
+
+=head1 DESCRIPTION
 
 =head1 METHODS
 
-=over 4
+=head2 B<set_param($key, $value)>
 
-=item B<set_param($key, $value)>
+=head2 B<get_param($key)>
 
-=item B<get_param($key)>
+=head2 B<has_no_params()>
 
-=item B<has_no_params()>
+=head2 B<num_params()>
 
-=item B<num_params()>
+=head2 B<delete_param($key)>
 
-=item B<delete_param($key)>
+=head2 B<param_pairs()>
 
-=item B<param_pairs()>
-
-=item B<get_request_hash()>
+=head2 B<get_request_hash()>
 
 =head1 AUTHOR
 
-Torsten Raudssus <torsten@raudssus.de>
+Torsten Raudssus <torsten@raudssus.de> L<http://www.raudssus.de/>
 
-=head1 COPYRIGHT & LICENSE 
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2010 Torsten Raudssus, all rights reserved.
+This software is copyright (c) 2010 by Raudssus Social Software.
 
-This library is free software; you can redistribute it and/or modify it under the same terms as 
-Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may 
-have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+

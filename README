@@ -1,57 +1,13 @@
-NAME
-    Net::APE - Packages for using APE-Project (Ajax Push Engine)
 
-SYNOPSIS
-      use Net::APE::Server;
-      use Net::APE::Cmd::Inlinepush;
-      use Net::APE::Request;
 
-      my $ape_server = Net::APE::Server->new();
+This archive contains the distribution Net-APE,
+version 0.003:
 
-      my $ape_cmd = Net::APE::Cmd::Inlinepush->new(
-        raw => 'mytest',
-      );
+  Packages for using APE-Project (Ajax Push Engine)
 
-      my $ape_request = Net::APE::Request->new(
-        server => $ape_server,
-      );
+This software is copyright (c) 2010 by Raudssus Social Software.
 
-      $ape_request->add_cmd($ape_cmd);
-      my $http_request = $ape_request->get_http_request;
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
-DESCRIPTION
-    So much todo...
-
-METHODS
-    Here is nothing... but see Net::APE::Cmd, Net::APE::Server,
-    Net::APE::Request
-
-AUTHOR
-    Torsten Raudssus <torsten@raudssus.de>
-
-BUGS
-    Please report any bugs or feature requests through the methods
-    following.
-
-SUPPORT
-    IRC
-
-      You can join #ape-project on irc.freenode.net, talk to Getty
-      or you can connect to irc.perl.org and talk there to Getty
-
-    Repository
-
-      http://github.com/Getty/net-ape
-      Pull request and additional contributors are welcome
-
-    Issue Tracker
-
-      http://github.com/Getty/net-ape/issues
-
-COPYRIGHT & LICENSE
-    Copyright 2010 Torsten Raudssus, all rights reserved.
-
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself, either Perl version 5.8.8 or, at
-    your option, any later version of Perl 5 you may have available.
 

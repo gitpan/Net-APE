@@ -1,16 +1,27 @@
 package Net::APE;
+BEGIN {
+  $Net::APE::AUTHORITY = 'cpan:GETTY';
+}
+BEGIN {
+  $Net::APE::VERSION = '0.003';
+}
+# ABSTRACT: Packages for using APE-Project (Ajax Push Engine)
 use strict;
 use warnings;
 
-our $VERSION = '0.002';
-
 1;
 
+
+__END__
 =pod
 
 =head1 NAME
 
 Net::APE - Packages for using APE-Project (Ajax Push Engine)
+
+=head1 VERSION
+
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -30,7 +41,7 @@ Net::APE - Packages for using APE-Project (Ajax Push Engine)
 
   $ape_request->add_cmd($ape_cmd);
   my $http_request = $ape_request->get_http_request;
-	
+
 =head1 DESCRIPTION
 
 So much todo...
@@ -38,10 +49,6 @@ So much todo...
 =head1 METHODS
 
 Here is nothing... but see L<Net::APE::Cmd>, L<Net::APE::Server>, L<Net::APE::Request>
-
-=head1 AUTHOR
-
-Torsten Raudssus <torsten@raudssus.de>
 
 =head1 BUGS 
 
@@ -56,19 +63,23 @@ IRC
 
 Repository
 
-  http://github.com/Getty/net-ape
+  http://github.com/Getty/p5-net-ape
   Pull request and additional contributors are welcome
- 
+
 Issue Tracker
 
-  http://github.com/Getty/net-ape/issues  
+  http://github.com/Getty/p5-net-ape/issues  
 
-=head1 COPYRIGHT & LICENSE 
+=head1 AUTHOR
 
-Copyright 2010 Torsten Raudssus, all rights reserved.
+Torsten Raudssus <torsten@raudssus.de> L<http://www.raudssus.de/>
 
-This library is free software; you can redistribute it and/or modify it under the same terms as 
-Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may 
-have available.
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Raudssus Social Software.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+

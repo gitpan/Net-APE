@@ -1,15 +1,13 @@
 package Net::APE::Server;
+BEGIN {
+  $Net::APE::Server::AUTHORITY = 'cpan:GETTY';
+}
+BEGIN {
+  $Net::APE::Server::VERSION = '0.003';
+}
+# ABSTRACT: Abstraction of an APE Server
 use Moose;
 
-=head1 NAME
-
-Net::APE::Server - Abstraction of an APE Server
-
-=head1 SYNOPSIS
-	
-=head1 DESCRIPTION
-
-=cut
 
 has host => (
 	is => 'ro',
@@ -32,7 +30,21 @@ sub url {
 
 1;
 
+
+__END__
 =pod
+
+=head1 NAME
+
+Net::APE::Server - Abstraction of an APE Server
+
+=head1 VERSION
+
+version 0.003
+
+=head1 SYNOPSIS
+
+=head1 DESCRIPTION
 
 =head1 METHODS
 
@@ -50,18 +62,16 @@ Elsewhere the default value is 6969.
 
 Returns the URL for the APE-Server
 
-=over 4
-
 =head1 AUTHOR
 
-Torsten Raudssus <torsten@raudssus.de>
+Torsten Raudssus <torsten@raudssus.de> L<http://www.raudssus.de/>
 
-=head1 COPYRIGHT & LICENSE 
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2010 Torsten Raudssus, all rights reserved.
+This software is copyright (c) 2010 by Raudssus Social Software.
 
-This library is free software; you can redistribute it and/or modify it under the same terms as 
-Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may 
-have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+

@@ -1,12 +1,14 @@
-Revision history for Net::APE
+Revision history for Net-APE
+
+0.003     2010-12-08 16:51:46 Europe/Berlin
+	- Switched to Dist::Zilla
+	- Fixed the f**ked up tests finally
 
 0.002    2010-07-15
-
-        - Some little fixes, more documentation
-		- Added new standard commands
-		- Added Net::APE::Session, Net::APE::Raw and Net::APE::Response
-		- Added live tests 
+	- Some little fixes, more documentation
+	- Added new standard commands
+	- Added Net::APE::Session, Net::APE::Raw and Net::APE::Response
+	- Added live tests 
 
 0.001    2010-07-14
-
-        - Initial Release
+	- Initial Release

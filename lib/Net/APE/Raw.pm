@@ -1,16 +1,14 @@
 package Net::APE::Raw;
+BEGIN {
+  $Net::APE::Raw::AUTHORITY = 'cpan:GETTY';
+}
+BEGIN {
+  $Net::APE::Raw::VERSION = '0.003';
+}
+# ABSTRACT: Raw object from the APE-Server
 use Moose;
 use DateTime;
 
-=head1 NAME
-
-Net::APE::Raw - Raw object from the APE-Server
-
-=head1 SYNOPSIS
-	
-=head1 DESCRIPTION
-
-=cut
 
 has 'time' => (
 	is => 'ro',
@@ -60,36 +58,65 @@ has code => (
 
 1;
 
+
+__END__
 =pod
+
+=head1 NAME
+
+Net::APE::Raw - Raw object from the APE-Server
+
+=head1 VERSION
+
+version 0.003
+
+=head1 SYNOPSIS
+
+  my $http_request = $ape_request->get_http_request;
+
+  my $http_response = $http_client->request($http_request);
+
+  my $ape_response = Net::APE::Response->new(
+    http_response => $http_response,
+  );
+
+  my $raw = $ape_response->shift_raw;
+  
+  $raw->time;
+  $raw->raw;
+  $raw->data;
+  $raw->code;
+
+=head1 DESCRIPTION
 
 =head1 METHODS
 
-=over 4
+=head2 B<time>
 
-=item B<set_param($key, $value)>
+Gives back the L<DateTime> object of the time variable of the answer
 
-=item B<get_param($key)>
+=head2 B<raw>
 
-=item B<has_no_params()>
+Gives back a string of the raw variable in the answer
 
-=item B<num_params()>
+=head2 B<data>
 
-=item B<delete_param($key)>
+Gives back the hashref of the data variable in the answer
 
-=item B<param_pairs()>
+=head2 B<code>
 
-=item B<get_request_hash()>
+Gives back the code of the code variable inside the data of the answer
 
 =head1 AUTHOR
 
-Torsten Raudssus <torsten@raudssus.de>
+Torsten Raudssus <torsten@raudssus.de> L<http://www.raudssus.de/>
 
-=head1 COPYRIGHT & LICENSE 
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2010 Torsten Raudssus, all rights reserved.
+This software is copyright (c) 2010 by Raudssus Social Software.
 
-This library is free software; you can redistribute it and/or modify it under the same terms as 
-Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may 
-have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+

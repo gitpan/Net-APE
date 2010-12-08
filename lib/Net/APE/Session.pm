@@ -1,18 +1,16 @@
 package Net::APE::Session;
+BEGIN {
+  $Net::APE::Session::AUTHORITY = 'cpan:GETTY';
+}
+BEGIN {
+  $Net::APE::Session::VERSION = '0.003';
+}
+# ABSTRACT: A session to an ape server
 use Moose;
 
 use Net::APE::Request;
 use Net::APE::Cmd::Connect;
 
-=head1 NAME
-
-Net::APE::Session - A session to an ape server
-
-=head1 SYNOPSIS
-	
-=head1 DESCRIPTION
-
-=cut
 
 has server => (
 	is => 'ro',
@@ -76,44 +74,56 @@ sub next_response {
 
 1;
 
+
+__END__
 =pod
+
+=head1 NAME
+
+Net::APE::Session - A session to an ape server
+
+=head1 VERSION
+
+version 0.003
+
+=head1 SYNOPSIS
+
+=head1 DESCRIPTION
 
 =head1 METHODS
 
-=item B<server>
+=head2 B<server>
 
 Get the L<Net::APE::Server> for the session
 
-=item B<sessid>
+=head2 B<sessid>
 
 Get or set the L<Net::APE::Server> to send the commands
 
-=item B<add_cmd($cmd)>
+=head2 B<add_cmd($cmd)>
 
 Adding an L<Net::APE::Cmd> object to the request
 
-=item B<has_cmds>
+=head2 B<has_cmds>
 
-=item B<count_cmds>
+=head2 B<count_cmds>
 
 Getting a count of the added commands.
 
-=item B<no_cmds>
+=head2 B<no_cmds>
 
 Gives back true of there are no commands added.
 
-=over 4
-
 =head1 AUTHOR
 
-Torsten Raudssus <torsten@raudssus.de>
+Torsten Raudssus <torsten@raudssus.de> L<http://www.raudssus.de/>
 
-=head1 COPYRIGHT & LICENSE 
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2010 Torsten Raudssus, all rights reserved.
+This software is copyright (c) 2010 by Raudssus Social Software.
 
-This library is free software; you can redistribute it and/or modify it under the same terms as 
-Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may 
-have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+
